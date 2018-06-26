@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'PageController@index');
+Route::get('/dr', 'PageController@dr');
 Route::get('/services', 'PageController@services');
