@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10470,59 +10470,46 @@ return jQuery;
 
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-/* global $ */
-/* global $window */
-
-function navStickToTop() {
-    var $nav = $('nav');
-    var navTop = $nav.offset().top;
-
-    $(window).on('scroll', function () {
-        if ($window.scrollTop() >= navTop) {
-            $nav.addClass('fixed-top');
-        } else {
-            $nav.removeClass('fixed-top');
-        }
-    });
-}
-
-navStickToTop();
-
-/***/ }),
+/* 2 */,
 /* 3 */,
-/* 4 */,
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
-__webpack_require__(2);
-module.exports = __webpack_require__(6);
+module.exports = __webpack_require__(5);
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /* global $ */
 /* global $window */
 
-function navStickToTop() {
-    var $nav = $('nav');
-    var navTop = $nav.offset().top;
+function initializeNav() {
+    function navStickToTop() {
+        var $nav = $('nav');
+        var navTop = $nav.offset().top;
 
-    $(window).on('scroll', function () {
-        if ($window.scrollTop() >= navTop) {
-            $nav.addClass('fixed-top');
-        } else {
-            $nav.removeClass('fixed-top');
-        }
+        $(window).on('scroll', function () {
+            if ($window.scrollTop() >= navTop) {
+                $nav.addClass('fixed-top');
+            } else {
+                $nav.removeClass('fixed-top');
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        navStickToTop();
+    });
+
+    $(window).resize(function () {
+        navStickToTop();
     });
 }
 
-navStickToTop();
+initializeNav();
 
 /***/ })
 /******/ ]);

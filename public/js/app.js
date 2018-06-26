@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10471,37 +10471,14 @@ return jQuery;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-/* global $ */
-/* global $window */
-
-function navStickToTop() {
-    var $nav = $('nav');
-    var navTop = $nav.offset().top;
-
-    $(window).on('scroll', function () {
-        if ($window.scrollTop() >= navTop) {
-            $nav.addClass('fixed-top');
-        } else {
-            $nav.removeClass('fixed-top');
-        }
-    });
-}
-
-navStickToTop();
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
-__webpack_require__(2);
-module.exports = __webpack_require__(4);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
