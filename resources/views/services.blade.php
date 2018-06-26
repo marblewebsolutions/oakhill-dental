@@ -1,4 +1,4 @@
-@extends('app', ['page_class' => 'services'])
+@extends('app', ['page_class' => 'services', 'page_title' => 'Services'])
 
 
 @section('main')

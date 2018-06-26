@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    <title>MWS TEMPLATE</title>
+    <title>{{ (!empty($page_title) ? $page_title . ' | ' : '') }} Oakhill Dental Associates P.L.L.C.</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
