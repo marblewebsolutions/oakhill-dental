@@ -3,7 +3,7 @@
 
 @section('main')
     <div class="header">
-        <div class="header-top"><h1>Delta Dental</h1></div>
+        <div class="header-top"><h1>Oakhill Dental</h1></div>
         <div class="header-img preload"></div>
     </div>
 
