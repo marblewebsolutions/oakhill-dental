@@ -1,2 +1,1 @@
-# mws-template
-Template for MWS
+# Oakhill Delta Website
