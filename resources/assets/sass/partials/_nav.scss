@@ -1,8 +1,12 @@
 .nav {
   background: $white;
-  box-shadow: 0 0 15px 0 rgba(0,0,0,.6);
-  height: 6em;
+  box-shadow: 0 0 20px 3px rgba(0,0,0,.5);
+  height: $nav-height;
+  position: fixed;
   text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: $nav-z;
 
   .nav-link {
     display: inline-block;
@@ -20,5 +24,9 @@
     display: flex;
     height: inherit;
     justify-content: space-evenly;
+  }
+  
+  & + .block {
+    margin-top: $nav-height;
   }
 }

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,29 +71,32 @@
 /**
  * Base js file that can be used on any page.
  * Do not include page specific js.
- * 
- * global $
  */
+
+/*global $*/
 
 // jQuery include
 window.$ = window.jQuery = __webpack_require__(1);
-/*global $*/
+$window = $(window);
 
-var preloadImg = $(".preload");
-console.log(preloadImg);
-for (var i = 0; i < preloadImg.length; i++) {
-    if (preloadImg[0].complete) {
-        // Already loaded, call the handler directly
-        preloaded();
-    } else {
-        // Not loaded yet, register the handler
-        preloadImg.on('load', preloaded(preloadImg[i]));
+function preloadImages() {
+    var preloaded = function preloaded($img) {
+        $($img).removeClass('preload');
+    };
+
+    var preloadImg = $(".preload");
+    for (var i = 0; i < preloadImg.length; i++) {
+        if (preloadImg[0].complete) {
+            // Already loaded, call the handler directly
+            preloaded();
+        } else {
+            // Not loaded yet, register the handler
+            preloadImg.on('load', preloaded(preloadImg[i]));
+        }
     }
 }
 
-function preloaded($img) {
-    $($img).removeClass('preload');
-}
+preloadImages();
 
 /***/ }),
 /* 1 */
@@ -10468,14 +10471,37 @@ return jQuery;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-__webpack_require__(0);
-module.exports = __webpack_require__(3);
+/* global $ */
+/* global $window */
 
+function navStickToTop() {
+    var $nav = $('nav');
+    var navTop = $nav.offset().top;
+
+    $(window).on('scroll', function () {
+        if ($window.scrollTop() >= navTop) {
+            $nav.addClass('fixed-top');
+        } else {
+            $nav.removeClass('fixed-top');
+        }
+    });
+}
+
+navStickToTop();
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+__webpack_require__(2);
+module.exports = __webpack_require__(4);
+
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

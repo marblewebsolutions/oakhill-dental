@@ -1,37 +1,13 @@
 @extends('app', ['page_class' => 'home'])
 
 
-@section('modal-body')
-    <h1>Test</h1>
-@stop
-
-
-@section('modal')
-    <div class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1>Test</h1>
-                <p class="modal-close">&times;</p>
-            </div>
-            <div class="modal-body">
-                <p>Hello?</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn">Save</button>
-            </div>
-        </div>
-    </div>
-@stop
-
-
-
 @section('main')
     <div class="header">
         <div class="header-top"><h1>Delta Dental</h1></div>
         <div class="header-img preload"></div>
     </div>
 
-    @include('partials.nav')
+    @include('partials.nav', ['active' => 'home'])
     
     <div class="block welcome pb-lg">
         <div class="block-content">
@@ -62,6 +38,7 @@
             delivering exceptional dental care to the Greater Lansing Michigan 
             area.</h3>
         </div>
+        
         <div class="banner">
             <h3>Reach out to schedule an appointment <a class="btn ml-sm" href="#">CALL</a></h3>
         </div>

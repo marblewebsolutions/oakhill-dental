@@ -1,0 +1,127 @@
+.services {
+    .block-services {
+        background: $gold;
+        
+        .block-content {
+            padding: 0;
+        }
+        
+        .tile {
+            background: $dark-gray;
+            background-image: url('/images/test-landscape.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 22em;
+            opacity: 1;
+            padding: 1em;
+            position: relative;
+            
+            .tile-title {
+                background: $gold-trans;
+                bottom: 1em;
+                display: flex;
+                height: 4em;
+                left: 1em;
+                overflow: hidden;
+                padding: 0 1em;
+                position: absolute;
+                right: 1em;
+                
+                h3 {
+                    margin: auto;
+                    text-align: center;
+                }
+            }
+            
+            &::after {
+                background: $white;
+                content: "";
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transition: 2s opacity ease;
+                width: 100%;
+            }
+            
+            &.preload {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+        
+        .tiles {
+            display: grid;
+            grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+        }
+    }
+    
+    .block-testimonial {
+        background: $dark-gray;
+        text-align: center;
+        
+        .btn {
+            border: 3px solid $gold;
+            display: inline-block;
+            margin-left: 2em;
+            max-width: 10em;
+            vertical-align: middle;
+            
+            &:hover {
+                background: $gold;
+                color: $text;
+            }
+        }
+        
+        .reviewer {
+            margin-top: .5em;
+            text-align: right;
+        }
+        
+        .text-cont {
+            color: $gold;
+            display: inline-block;
+            max-width: 30em;
+            vertical-align: middle;
+        }
+        
+        .quote {
+            font-style: italic;
+        }
+    }
+    
+    .header {
+        background: $dark-gray;
+        
+        .text-cont {
+            background: $gold;
+            margin: auto;
+            max-width: 25em;
+            padding: 1.5em;
+        }
+    }
+    
+    @media screen and (max-width: $sm) {
+        .block-services {
+            .tile {
+                .tile-title {
+                    padding: 0 .5em;
+                }
+            }
+            
+            .tiles {
+                grid-template-columns: 50% 50%;
+            }
+        }
+    }
+    
+    @media screen and (max-width: $sm) {
+        .block-services {
+            .tiles {
+                grid-template-columns: 100%;
+            }
+        }
+    }
+}
