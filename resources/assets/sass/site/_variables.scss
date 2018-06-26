@@ -1,0 +1,84 @@
+// Media Queries
+$xxs: 420px;
+$xs: 576px;
+$sm: 768px;
+$med: 992px;
+$lg: 1200px;
+
+// Font Sizes
+$font-size-h1: 3rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 2rem;
+$font-size-p: 1.2rem;
+$font-size-html: 12px;
+
+// Layout Spacing
+$content-max-width: 80rem;
+
+// Z Indexes
+$nav-mobile-z: 900;
+$nav-z: 1000;
+$modal-z: 1100;
+
+// Spacing
+$spacing: (
+  auto: auto,
+  0: 0,
+  xs: .5rem,
+  sm: 1rem,
+  med: 2rem,
+  lg: 3rem,
+  xl: 4rem
+);
+
+@each $name, $size in $spacing {
+  // Margins
+  .m-#{$name} {
+    margin: $size;
+  }
+  .mx-#{$name} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+  .my-#{$name} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+  .mt-#{$name} {
+    margin-top: $size;
+  }
+  .mr-#{$name} {
+    margin-right: $size;
+  }
+  .mb-#{$name} {
+    margin-bottom: $size;
+  }
+  .ml-#{$name} {
+    margin-left: $size;
+  }
+
+  // Paddings
+  .p-#{$name} {
+    padding: $size;
+  }
+  .px-#{$name} {
+  padding-left: $size;
+    padding-right: $size;
+  }
+  .py-#{$name} {
+  padding-top: $size;
+    padding-bottom: $size;
+  }
+  .pt-#{$name} {
+    padding-top: $size;
+  }
+  .pr-#{$name} {
+    padding-right: $size;
+  }
+  .pb-#{$name} {
+    padding-bottom: $size;
+  }
+  .pl-#{$name} {
+    padding-left: $size;
+  }
+}

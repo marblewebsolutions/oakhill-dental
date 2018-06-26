@@ -1,0 +1,55 @@
+a {
+  color: $text;
+  text-decoration: none;
+  
+  &:hover {
+    color: $text-gold;
+  }
+}
+
+.underline-link {
+  border-bottom: 2px solid transparent;
+  color: $text;
+  padding-bottom: 3px;
+  @include transition();
+  
+  &:hover {
+    border-color: $text-gold;
+    color: $text-gold;
+  }
+}
+
+a,
+p {
+  font-size: $font-size-p;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+html {
+  color: $text;
+  font-family: serif;
+  font-size: $font-size-html;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}

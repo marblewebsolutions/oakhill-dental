@@ -1,0 +1,36 @@
+.home {
+  .header {
+    .header-img {
+      background-attachment: fixed;
+      background-image: url('/images/pexels-photo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: calc(100vh - 12em);
+      opacity: 1;
+      transition: 2s opacity ease;
+      
+      &.preload {
+        opacity: 0;
+      }
+    }
+    
+    .header-top {
+      align-items: center;
+      background: $dark-gray;
+      color: $white;
+      display: flex;
+      height: 6em;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+  }
+  
+  .welcome {
+    background: $dark-gray;
+    color: $gold;
+    
+    .bottom-text {
+      max-width: 30em;
+    }
+  }
+}

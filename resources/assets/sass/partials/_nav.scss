@@ -1,0 +1,24 @@
+.nav {
+  background: $white;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,.6);
+  height: 6em;
+  text-align: center;
+
+  .nav-link {
+    display: inline-block;
+
+    &.active {
+      a {
+        border-bottom: 2px solid $text-gold;
+        color: $text-gold;
+      }
+    }
+  }
+
+  .nav-links {
+    align-items: center;
+    display: flex;
+    height: inherit;
+    justify-content: space-evenly;
+  }
+}

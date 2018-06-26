@@ -1,0 +1,79 @@
+// Styles applied to the whole site
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background: $gold;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,.6);
+  color: $text;
+  display: flex;
+  height: 6em;
+  
+  &>* {
+    margin: auto;
+  }
+}
+
+.block {
+  .block-content {
+    margin: auto;
+    max-width: $content-max-width;
+    padding: 3em 2em;
+    position: relative;
+  }
+}
+
+.btn {
+  background: $white;
+  border: 2px solid $dark-gray;
+  color: $text;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: .2em 1em;
+  @include transition();
+
+  &:hover,
+  &.active {
+    background: $dark-gray;
+    box-shadow: none;
+    color: $white;
+  }
+}
+
+.clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.split-2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}

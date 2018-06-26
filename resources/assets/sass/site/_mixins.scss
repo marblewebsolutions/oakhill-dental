@@ -1,0 +1,40 @@
+@mixin border($color) {
+  border: .75em solid $color;
+}
+
+@mixin box-shadow($shadow: 2px 2px 18px $black-trans-20) {
+  box-shadow: $shadow;
+}
+
+@mixin clip-path($path) {
+  clip-path: $path;
+  -webkit-clip-path: $path;
+}
+
+@mixin grayscale($gray: 100%) {
+  filter: grayscale($gray);
+  -webkit-filter: grayscale($gray);
+}
+
+@mixin select($select) {
+  user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select;
+  -webkit-user-select: $select;
+}
+
+@mixin transform($transform) {
+  transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  -webkit-transform: $transform;
+}
+
+@mixin transition($property: all) {
+  transition: .15s $property linear;
+}
+
+@mixin transitionTwo($propOne, $propTwo) {
+  transition: .15s $propOne ease, .3s $propTwo ease;
+}
