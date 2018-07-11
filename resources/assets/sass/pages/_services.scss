@@ -8,13 +8,32 @@
         
         .tile {
             background: $dark-gray;
-            background-image: url('/images/test-landscape.jpg');
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             height: 22em;
             opacity: 1;
             padding: 1em;
             position: relative;
+            
+            .cover {
+                background: $dark-gray-trans;
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                @include transition();
+                width: 100%;
+                
+                .cover-text {
+                    color: $text-gold;
+                    line-height: 1.2;
+                    margin: 2em auto auto;
+                    text-align: center;
+                    width: 90%;
+                }
+            }
             
             .tile-title {
                 background: $gold-trans;
@@ -50,6 +69,36 @@
                     opacity: 1;
                 }
             }
+            
+            &:hover {
+                .cover {
+                    opacity: 1;
+                }
+            }
+        }
+        
+        .tile-1 {
+            background-image: url('/images/services/dentaltoolsStock.jpg');
+        }
+        
+        .tile-2 {
+            background-image: url('/images/services/smileStock.jpg');
+        }
+        
+        .tile-3 {
+            background-image: url('/images/services/sleepingStock.jpg');
+        }
+        
+        .tile-4 {
+            background-image: url('/images/services/smile2Stock.jpg');
+        }
+        
+        .tile-5 {
+            background-image: url('/images/services/crownStock.jpg');
+        }
+        
+        .tile-6 {
+            background-image: url('/images/services/venneer2Stock.jpg');
         }
         
         .tiles {
@@ -103,7 +152,7 @@
         }
     }
     
-    @media screen and (max-width: $sm) {
+    @media screen and (max-width: $med) {
         .block-services {
             .tile {
                 .tile-title {

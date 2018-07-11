@@ -1,8 +1,9 @@
 $accent: #49f;
 $black: #000;
 $dark-gray: #323232;
+$dark-gray-trans: transparentize($dark-gray, .2);
 $gold: #C6B46E;
-$gold-trans: transparentize($gold, .3);
+$gold-trans: transparentize($gold, .2);
 $primary: #d83;
 $text: $dark-gray;
 $text-gold: $gold;

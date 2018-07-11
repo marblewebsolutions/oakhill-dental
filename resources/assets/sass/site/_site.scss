@@ -77,3 +77,10 @@
 .text-right {
   text-align: right;
 }
+
+@media screen and (max-width: $sm) {
+  .split-2 {
+    display: block;
+    width: 100%;
+  }
+}

@@ -24,9 +24,11 @@
     display: flex;
     height: inherit;
     justify-content: space-evenly;
+    margin: auto;
+    max-width: 83em;
   }
   
-  & + .block {
+  & + .main .block:first-child {
     margin-top: $nav-height;
   }
 }

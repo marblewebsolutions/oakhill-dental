@@ -1,11 +1,14 @@
 .home {
   .header {
+    position: relative;
+    
     .header-img {
       background-attachment: fixed;
       background-image: url('/images/pexels-photo.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       height: calc(100vh - (#{$nav-height} * 2));
+      margin-top: $nav-height;
       opacity: 1;
       transition: 2s opacity ease;
       
@@ -17,14 +20,26 @@
     .header-top {
       align-items: center;
       background: $dark-gray;
+      bottom: 0;
       box-shadow: 0 0 20px 3px rgba(0,0,0,.5);
       color: $white;
       display: flex;
       height: $nav-height;
       justify-content: space-evenly;
-      position: relative;
+      position: absolute;
       text-align: center;
-      z-index: 1;
+      width: 100%;
+      z-index: $top-bar-z;
+      
+      .logo {
+        height: 100%;
+        width: auto;
+      }
+      
+      &.fixed-top {
+        position: fixed;
+        top: 0;
+      }
     }
   }
   
@@ -32,7 +47,7 @@
     position: static;
     width: 100%;
     
-    & + .block {
+    & + .main .block:first-child {
       margin-top: 0;
     }
     
@@ -40,7 +55,7 @@
       position: fixed;
       top: 0;
       
-      & + .block {
+      & + .main .block:first-child {
         margin-top: $nav-height;
       }
     }
@@ -50,8 +65,49 @@
     background: $dark-gray;
     color: $gold;
     
+    .block-content {
+      padding: 5em 2em 3em;
+    }
+    
     .bottom-text {
       max-width: 30em;
+    }
+    
+    .staff-photo {
+      padding: 0 1em 0 0;
+      position: relative;
+      
+      img {
+        padding: 10% 0 20% 10%;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .bg-gold {
+        background: $gold;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 60%;
+        z-index: 0;
+      }
+    }
+    
+    .welcome-text {
+      padding: 0 0 0 1em;
+    }
+  }
+  
+  @media screen and (max-width: $sm) {
+    .welcome {
+      .staff-photo {
+        padding: 0 0 1em;
+      }
+      
+      .welcome-text {
+        padding: 1em 0 0;
+      }
     }
   }
 }

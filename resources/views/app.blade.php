@@ -15,6 +15,10 @@
 </head>
 <body>
     <div class="view {{ strtolower($page_class) }}">
+        @yield('header')
+        
+        @include('partials.nav', ['active' => $page_class])
+        
         <div class="main">
             @yield('main')
         </div>

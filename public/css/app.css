@@ -442,7 +442,7 @@
 
 .block .block-content {
   margin: auto;
-  max-width: 80rem;
+  max-width: 69rem;
   padding: 3em 2em;
   position: relative;
 }
@@ -496,6 +496,13 @@
 
 .text-right {
   text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+  .split-2 {
+    display: block;
+    width: 100%;
+  }
 }
 
 a {
@@ -665,10 +672,16 @@ ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin: auto;
+  max-width: 83em;
 }
 
-.nav + .block {
+.nav + .main .block:first-child {
   margin-top: 6em;
+}
+
+.home .header {
+  position: relative;
 }
 
 .home .header .header-img {
@@ -677,6 +690,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - (6em * 2));
+  margin-top: 6em;
   opacity: 1;
   -webkit-transition: 2s opacity ease;
   transition: 2s opacity ease;
@@ -691,6 +705,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   background: #323232;
+  bottom: 0;
   -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -701,9 +716,20 @@ ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  position: relative;
+  position: absolute;
   text-align: center;
-  z-index: 1;
+  width: 100%;
+  z-index: 999;
+}
+
+.home .header .header-top .logo {
+  height: 100%;
+  width: auto;
+}
+
+.home .header .header-top.fixed-top {
+  position: fixed;
+  top: 0;
 }
 
 .home .nav {
@@ -711,7 +737,7 @@ ul {
   width: 100%;
 }
 
-.home .nav + .block {
+.home .nav + .main .block:first-child {
   margin-top: 0;
 }
 
@@ -720,7 +746,7 @@ ul {
   top: 0;
 }
 
-.home .nav.fixed-top + .block {
+.home .nav.fixed-top + .main .block:first-child {
   margin-top: 6em;
 }
 
@@ -729,8 +755,47 @@ ul {
   color: #C6B46E;
 }
 
+.home .welcome .block-content {
+  padding: 5em 2em 3em;
+}
+
 .home .welcome .bottom-text {
   max-width: 30em;
+}
+
+.home .welcome .staff-photo {
+  padding: 0 1em 0 0;
+  position: relative;
+}
+
+.home .welcome .staff-photo img {
+  padding: 10% 0 20% 10%;
+  position: relative;
+  z-index: 1;
+}
+
+.home .welcome .staff-photo .bg-gold {
+  background: #C6B46E;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 60%;
+  z-index: 0;
+}
+
+.home .welcome .welcome-text {
+  padding: 0 0 0 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .home .welcome .staff-photo {
+    padding: 0 0 1em;
+  }
+
+  .home .welcome .welcome-text {
+    padding: 1em 0 0;
+  }
 }
 
 .services .block-services {
@@ -743,7 +808,7 @@ ul {
 
 .services .block-services .tile {
   background: #323232;
-  background-image: url("/images/test-landscape.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 22em;
@@ -752,8 +817,28 @@ ul {
   position: relative;
 }
 
+.services .block-services .tile .cover {
+  background: rgba(50, 50, 50, 0.8);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.15s all linear;
+  transition: 0.15s all linear;
+  width: 100%;
+}
+
+.services .block-services .tile .cover .cover-text {
+  color: #C6B46E;
+  line-height: 1.2;
+  margin: 2em auto auto;
+  text-align: center;
+  width: 90%;
+}
+
 .services .block-services .tile .tile-title {
-  background: rgba(198, 180, 110, 0.7);
+  background: rgba(198, 180, 110, 0.8);
   bottom: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,6 +871,34 @@ ul {
 
 .services .block-services .tile.preload::after {
   opacity: 1;
+}
+
+.services .block-services .tile:hover .cover {
+  opacity: 1;
+}
+
+.services .block-services .tile-1 {
+  background-image: url("/images/services/dentaltoolsStock.jpg");
+}
+
+.services .block-services .tile-2 {
+  background-image: url("/images/services/smileStock.jpg");
+}
+
+.services .block-services .tile-3 {
+  background-image: url("/images/services/sleepingStock.jpg");
+}
+
+.services .block-services .tile-4 {
+  background-image: url("/images/services/smile2Stock.jpg");
+}
+
+.services .block-services .tile-5 {
+  background-image: url("/images/services/crownStock.jpg");
+}
+
+.services .block-services .tile-6 {
+  background-image: url("/images/services/venneer2Stock.jpg");
 }
 
 .services .block-services .tiles {
@@ -838,7 +951,7 @@ ul {
   padding: 1.5em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .services .block-services .tile .tile-title {
     padding: 0 .5em;
   }
