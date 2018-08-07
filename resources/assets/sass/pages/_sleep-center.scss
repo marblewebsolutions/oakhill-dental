@@ -1,0 +1,59 @@
+.sleep-center {
+  h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    
+    &.text-left {
+      text-align: left;
+    }
+  }
+  
+  .treatment-procedure {
+    text-align: center;
+    
+    ul {
+      list-style: disc;
+      
+      li {
+        font-size: 1.3rem;
+        text-align: left;
+      }
+    }
+    
+    .col {
+      display: inline-block;
+      max-width: 18em;
+      padding: 1em;
+      vertical-align: top;
+      width: 100%;
+    }
+  }
+  
+  .video-container {
+    margin: 2em auto auto;
+    max-width: 42em;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    
+    iframe {
+      height: 100%;
+      left: 0;
+      padding: 5% 10% 5% 0;
+    	position: absolute;
+    	top: 0;
+    	width: 100%;
+    }
+    
+    .img-bg {
+      height: 100%;
+      right: 0;
+      top: 0;
+      width: 90%;
+    }
+  }
+}

@@ -1,13 +1,41 @@
 .services {
+    .block-header {
+        background: $white;
+        
+        .header-photo {
+            position: relative;
+            
+            img {
+                padding: 8% 5% 0 0;
+                position: relative;
+            }
+            
+            .img-bg {
+                height: 25%;
+                right: 0;
+                top: 0;
+                width: 35%;
+            }
+        }
+        
+        .text-cont {
+            background: $primary;
+            border-radius: 24px;
+            margin: auto;
+            max-width: 25em;
+            padding: 1.5em;
+        }
+    }
+    
     .block-services {
-        background: $gold;
+        background: $primary;
         
         .block-content {
             padding: 0;
         }
         
         .tile {
-            background: $dark-gray;
+            background: $white;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -27,7 +55,7 @@
                 width: 100%;
                 
                 .cover-text {
-                    color: $text-gold;
+                    color: $primary;
                     line-height: 1.2;
                     margin: 2em auto auto;
                     text-align: center;
@@ -36,7 +64,7 @@
             }
             
             .tile-title {
-                background: $gold-trans;
+                background: $primary-trans;
                 bottom: 1em;
                 display: flex;
                 height: 4em;
@@ -108,19 +136,17 @@
     }
     
     .block-testimonial {
-        background: $dark-gray;
         text-align: center;
         
         .btn {
-            border: 3px solid $gold;
+            background: $primary;
             display: inline-block;
-            margin-left: 2em;
+            margin: 0 0 0 2em;
             max-width: 10em;
             vertical-align: middle;
             
             &:hover {
-                background: $gold;
-                color: $text;
+                background: $accent;
             }
         }
         
@@ -130,7 +156,6 @@
         }
         
         .text-cont {
-            color: $gold;
             display: inline-block;
             max-width: 30em;
             vertical-align: middle;
@@ -141,20 +166,28 @@
         }
     }
     
-    .header {
-        background: $dark-gray;
-        
-        .text-cont {
-            background: $gold;
-            margin: auto;
-            max-width: 25em;
-            padding: 1.5em;
-        }
-    }
-    
     @media screen and (max-width: $med) {
+        .block-header {
+            .header-photo {
+                img {
+                    @include box-shadow();
+                    padding: 0;
+                }
+            }
+            
+            .text-cont {
+                @include box-shadow();
+            }
+        }
+        
         .block-services {
             .tile {
+                .cover {
+                    .cover-text {
+                        font-size: 1.3em;
+                    }
+                }
+                
                 .tile-title {
                     padding: 0 .5em;
                 }
@@ -162,6 +195,17 @@
             
             .tiles {
                 grid-template-columns: 50% 50%;
+            }
+        }
+        
+        .block-testimonial {
+            .btn {
+                @include box-shadow();
+                margin: 2em 0 0 0;
+                
+                &:hover {
+                    box-shadow: none;
+                }
             }
         }
     }

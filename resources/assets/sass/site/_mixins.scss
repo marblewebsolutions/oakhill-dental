@@ -2,7 +2,7 @@
   border: .75em solid $color;
 }
 
-@mixin box-shadow($shadow: 2px 2px 18px $black-trans-20) {
+@mixin box-shadow($shadow: 2px 2px 15px $dark-gray-trans) {
   box-shadow: $shadow;
 }
 
@@ -36,5 +36,5 @@
 }
 
 @mixin transitionTwo($propOne, $propTwo) {
-  transition: .15s $propOne ease, .3s $propTwo ease;
+  transition: .15s $propOne ease, .15s $propTwo ease;
 }

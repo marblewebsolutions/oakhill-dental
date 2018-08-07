@@ -1,3 +1,3 @@
 <div class="banner">
-    <h3>Reach out to schedule an appointment <a class="btn ml-sm" href="tel:5174844455">CALL</a></h3>
+    <h3>Reach out to schedule an appointment @include('partials.links.phone', ['classes' => ['btn', 'ml-sm'], 'text' => 'CALL'])</h3>
 </div>

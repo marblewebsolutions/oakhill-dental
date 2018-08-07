@@ -2,6 +2,9 @@
 // Google Icons
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Courgette|Lusitana|Tangerine:700');
+
 // Site
 @import "site/_colors";
 @import "site/_mixins";
@@ -18,6 +21,11 @@
 @import "partials/_nav";
 
 // Pages
-@import "pages/_home";
-@import "pages/_services";
 @import "pages/_dr";
+@import "pages/_financial";
+@import "pages/_home";
+@import "pages/_patient-forms";
+@import "pages/_services";
+@import "pages/_sleep-center";
+@import "pages/_team";
+@import "pages/_testimonials";

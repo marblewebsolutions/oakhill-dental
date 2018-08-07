@@ -5,5 +5,5 @@
         my anxiety to rest. Thank you all!"</p>
         <p class="reviewer">- Jonathon S</p>
     </div>
-    <a class="btn" href="#">SEE MORE TESTIMONIALS</a>
+    <a class="btn" href="{{ url('testimonials') }}">SEE MORE TESTIMONIALS</a>
 </div>

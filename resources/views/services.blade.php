@@ -2,7 +2,7 @@
 
 
 @section('main')
-    <div class="block header pb-lg">
+    <div class="block block-header pb-lg">
         @include('partials.services.block-header')
     </div>
     

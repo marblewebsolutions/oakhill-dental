@@ -1,6 +1,7 @@
 a {
   color: $text;
   text-decoration: none;
+  @include transition();
   
   &:hover {
     color: $text-gold;
@@ -13,7 +14,8 @@ a {
   padding-bottom: 3px;
   @include transition();
   
-  &:hover {
+  &:hover,
+  &.active {
     border-color: $text-gold;
     color: $text-gold;
   }
@@ -36,9 +38,20 @@ h3 {
   font-size: 1.6em;
 }
 
+hr {
+  &.spacer {
+    background: $accent;
+    border-radius: 6px;
+    height: 6px;
+    margin: 3em auto;
+    max-width: 20em;
+    width: 100%;
+  }
+}
+
 html {
   color: $text;
-  font-family: Times, serif;
+  font-family: 'Lusitana', Times, serif;
   font-size: $font-size-html;
 }
 
@@ -47,9 +60,38 @@ img {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 ul {
   list-style: none;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.title {
+  font-family: 'Tangerine', 'Courgette', cursive;
+  font-size: 5em;
+}
+
+@media screen and (max-width: $med) {
+  a,
+  p {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  p {
+    line-height: 1.1;
+  }
+
+  .title {
+    font-size: 4em;
+  }
 }

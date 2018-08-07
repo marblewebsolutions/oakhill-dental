@@ -7,13 +7,69 @@
   top: 0;
   width: 100%;
   z-index: $nav-z;
+  
+  .mobile-content {
+    align-items: center;
+    color: $primary;
+    display: none;
+    height: 100%;
+    justify-content: space-between;
+    margin: auto;
+    width: 95%;
+    
+    img {
+      height: 100%;
+      width: auto;
+    }
+    
+    .center {
+      height: inherit;
+    }
+    
+    .left,
+    .right {
+      width: 5em;
+    }
+    
+    .left {
+      text-align: left;
+      
+      .material-icons {
+        color: $primary;
+        font-size: 30px;
+        padding: .5rem;
+      }
+    }
+    
+    .mobile-nav-toggle {
+      cursor: pointer;
+      margin: 0 0 0 auto;
+      padding: .5em;
+      @include transition();
+      width: 4em;
+      
+      .line {
+        background: $primary;
+        border-radius: 2px;
+        height: 4px;
+        margin: 6px 0;
+      }
+      
+      &.active {
+        transform: rotate(90deg);
+      }
+    }
+    
+    .right {
+      text-align: right;
+    }
+  }
 
   .nav-link {
     display: inline-block;
 
     &.active {
       a {
-        border-bottom: 2px solid $text-gold;
         color: $text-gold;
       }
     }
@@ -28,7 +84,53 @@
     max-width: 83em;
   }
   
-  & + .main .block:first-child {
+  & + .main {
     margin-top: $nav-height;
+  }
+  
+  @media screen and (max-width: $med) {
+    .mobile-content {
+      display: flex;
+    }
+    
+    .nav-links {
+      display: none;
+    }
+  }
+}
+
+.nav-mobile {
+  background: $white;
+  @include box-shadow();
+  display: none;
+  position: fixed;
+  text-align: center;
+  top: 6em;
+  width: 100%;
+  z-index: $nav-mobile-z;
+  
+  .nav-link {
+    border-bottom: 1px solid $primary;
+    margin: auto;
+    padding: 1em 0;
+    width: 90%;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    &.active {
+      a {
+        color: $text-gold;
+      }
+    }
+  }
+  
+  &.active {
+    display: block;
+  }
+  
+  @media screen and (max-width: $med) {
+    //display: block;
   }
 }

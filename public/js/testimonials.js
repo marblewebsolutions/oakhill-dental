@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10541,96 +10541,58 @@ Navigation();
 /***/ }),
 /* 3 */,
 /* 4 */,
-/* 5 */
+/* 5 */,
+/* 6 */,
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
 __webpack_require__(2);
-module.exports = __webpack_require__(6);
+module.exports = __webpack_require__(8);
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
-/* global $ */
-/* global $window */
+function Testimonials() {
+    function initializeTesimonials() {
+        var $reviewsTable = $('table.rad');
+        var $reviews = $reviewsTable.find('tr.rad');
+        var $moreBtn = $('.more');
+        var reviewCount = $reviews.length;
+        var showingCount = 10; // Initially show 10 reviews
 
-var Home = function Home() {
-    function initializeTopBar() {
-        var $topBar = $('.header-top');
-        var topBarHeight = $topBar.height();
-        var navHeight = $('.nav').height();
-
-        function topBarStickToTop() {
-            if ($window.outerWidth() > 768) {
-                var welcomeBlockOffsetTop = $('.block.welcome').offset().top;
-
-                if ($window.scrollTop() >= welcomeBlockOffsetTop - navHeight - topBarHeight) {
-                    $topBar.removeClass('fixed-top');
-                } else {
-                    $topBar.addClass('fixed-top');
-                }
-
-                $(window).on('scroll', function () {
-                    if ($window.scrollTop() >= welcomeBlockOffsetTop - navHeight - topBarHeight) {
-                        $topBar.removeClass('fixed-top');
-                    } else {
-                        $topBar.addClass('fixed-top');
-                    }
-                });
-            }
+        if (reviewCount < 10) {
+            // Show all, no need to hide any
+            return;
         }
 
-        topBarStickToTop();
+        showReviews($reviews, showingCount);
 
-        // Offsets may change on resizing window
-        $(window).resize(function () {
-            topBarStickToTop();
+        $moreBtn.click(function () {
+            showingCount += 5;
+
+            if (showingCount > reviewCount) {
+                showingCount = reviewCount;
+            }
+
+            showReviews($reviews, showingCount);
         });
-    }
 
-    // Stick nav to top after scroll threshold
-    function initializeNav() {
-        var $nav = $('.nav');
-
-        function navStickToTop() {
-            if ($window.outerWidth() > 768) {
-                var navOffsetTop = $nav.offset().top;
-
-                if ($window.scrollTop() < navOffsetTop) {
-                    $nav.addClass('relative');
-                } else {
-                    $nav.removeClass('relative');
-                }
-
-                $(window).on('scroll', function () {
-                    if ($window.scrollTop() < navOffsetTop) {
-                        $nav.addClass('relative');
-                    } else {
-                        $nav.removeClass('relative');
-                    }
-                });
-            } else {
-                $nav.removeClass('relative');
+        function showReviews($reviews, amount) {
+            $reviews.hide();
+            for (var i = 0; i < amount; i++) {
+                $($reviews[i]).show();
             }
         }
-
-        navStickToTop();
-
-        // Offsets may change on resizing window
-        $(window).resize(function () {
-            navStickToTop();
-        });
     }
 
-    initializeTopBar();
-    initializeNav();
-};
+    initializeTesimonials();
+}
 
-// Call Home 
 $(document).ready(function () {
-    Home();
+    Testimonials();
 });
 
 /***/ })

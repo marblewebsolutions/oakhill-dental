@@ -10,8 +10,9 @@
             <b>We look forward to providing you and your family with quality 
             care.</b></p>
         </div>
-    </div><div class="split-2">
-
+    </div><div class="split-2 header-photo">
+        <div class="img-bg"></div>
+        <img src="{{ asset('images/staffphoto.png') }}" alt="Staff Photo">
     </div>
 </div>
 

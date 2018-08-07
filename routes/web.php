@@ -12,5 +12,13 @@
 */
 
 Route::get('/', 'PageController@index');
-Route::get('/dr', 'PageController@dr');
-Route::get('/services', 'PageController@services');
+Route::get('dr', 'PageController@dr');
+Route::get('the-team', 'PageController@team');
+Route::get('services', 'PageController@services');
+Route::get('sleep-center', 'PageController@sleepCenter');
+Route::get('financial-info', 'PageController@financial');
+Route::get('patient-forms', 'PageController@patientForms');
+Route::get('testimonials', 'PageController@testimonials');
+
+URL::asset('pdf/RECORD-RELEASE-TO-PATIENT.pdf');
+URL::asset('pdf/RECORD-RELEASE-TO-THIRD-PARTY.pdf');

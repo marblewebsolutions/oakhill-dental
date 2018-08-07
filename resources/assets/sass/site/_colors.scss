@@ -1,10 +1,16 @@
-$accent: #49f;
 $black: #000;
-$dark-gray: #323232;
+$dark-gray: #303030;
 $dark-gray-trans: transparentize($dark-gray, .2);
+$green: #a4c0ac;
 $gold: #C6B46E;
 $gold-trans: transparentize($gold, .2);
-$primary: #d83;
+$white: #fff;
+
+$primary: $green;
+$primary-trans: transparentize($primary, .2);
+$secondary: $dark-gray;
+$secondary-trans: transparentize($secondary, .2);
+$accent: $gold;
+
 $text: $dark-gray;
 $text-gold: $gold;
-$white: #fff;

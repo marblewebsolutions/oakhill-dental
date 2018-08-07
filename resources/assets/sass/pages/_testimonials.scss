@@ -1,0 +1,35 @@
+.testimonials {
+    .block-testimonials {
+        text-align: center;
+        
+        img {
+            width: auto;
+        }
+        
+        table {
+            border-spacing: 0 15px;
+            font-size: 1.3em;
+            margin: auto;
+            max-width: 50em;
+            text-align: left;
+        }
+        
+        tr.rad td {
+            border-bottom: 2px solid $primary;
+        }
+        
+        .more {
+            background: $primary;
+            margin-top: 1em;
+            
+            &:hover {
+                background: $accent;
+            }
+        }
+        
+        .radbyline,
+        .radstars {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,7 +1,17 @@
 .footer {
-  background: $accent;
+  background: $primary;
   align-items: center;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
   padding: 1em;
+  
+  @media screen and (max-width: $med) {
+    align-items: flex-start;
+    flex-direction: column;
+    
+    > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
 }

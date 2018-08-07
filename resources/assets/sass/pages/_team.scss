@@ -1,0 +1,41 @@
+.team {
+    .team-member {
+        background: $primary;
+        border-radius: 24px;
+        box-shadow: 2px 2px 25px $dark-gray-trans;
+        color: $text;
+        margin-top: 2em;
+        
+        .bio {
+            margin-top: .5em;
+        }
+        
+        .description,
+        .profile {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .description {
+            padding: 2em 2em 2em 0;
+            width: calc(100% - 16em);
+        }
+        
+        .name {
+            font-weight: bold;
+        }
+        
+        .profile {
+            padding: 2em;
+            width: 16em;
+            
+            img {
+                display: block;
+            }
+        }
+        
+        .role {
+            font-style: italic;
+        }
+    }
+}
