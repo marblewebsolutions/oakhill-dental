@@ -9,9 +9,9 @@
             @include('partials.team.amber')
             @include('partials.team.patty')
             @include('partials.team.cammie')
-            @include('partials.team.bianca')
+           
             @include('partials.team.cyndi')
-            @include('partials.team.tina')
+            
         </div>
     </div>
     
