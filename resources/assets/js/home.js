@@ -69,8 +69,29 @@ var Home = function() {
         });
     }
     
+    function initializeHeaderImageScroll() {
+        var $bgImg = $('.header-img');
+        var $window = $(window);
+        var windowHeight = $window.outerHeight();
+        var topHeaderHeight = $('.header-top').height();
+        var navHeight = $('.nav').height();
+        
+        // Background position constants
+        var startPos = 10; // 10% down to start
+        var range = 50; // Can move up to 50% down
+        
+        
+        $window.scroll(function() {
+            var scrollTop = $(window).scrollTop();
+            var bgPosPer =  (((scrollTop) / (windowHeight - topHeaderHeight - navHeight)) * range + startPos) + "%";
+            console.log(bgPosPer);
+            $bgImg.css('background-position', "0 " + bgPosPer);
+        })
+    }
+    
     initializeTopBar();
     initializeNav();
+    initializeHeaderImageScroll();
 }
 
 

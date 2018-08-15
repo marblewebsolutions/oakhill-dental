@@ -45,10 +45,10 @@
     position: relative;
     
     .header-img {
-      background-attachment: fixed;
-      background-image: url('/images/pexels-photo.jpg');
+      background-image: url('/images/dr-zick-w-kids.jpg');
+      background-position: 0 10%;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 100% auto;
       height: calc(100vh - (#{$nav-height} * 2));
       margin-top: $nav-height;
       opacity: 1;

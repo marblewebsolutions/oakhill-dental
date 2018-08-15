@@ -12,7 +12,7 @@
         </div>
     </div><div class="split-2 header-photo">
         <div class="img-bg"></div>
-        <img src="{{ asset('images/staffphoto.png') }}" alt="Staff Photo">
+        <img src="{{ asset('images/oakhill_team.jpg') }}" alt="Staff Photo">
     </div>
 </div>
 

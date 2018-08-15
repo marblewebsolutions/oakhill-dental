@@ -4,7 +4,7 @@
     <div class="show-on-desktop">
         <div class="split-2 staff-photo">
             <div class="img-bg"></div>
-            <img src="{{ asset('images/staffphoto.png') }}" alt="Staff Photo">
+            <img src="{{ asset('images/oakhill_team.jpg') }}" alt="Staff Photo">
         </div><div class="split-2 text-left welcome-text">
             <h3 class="text-center">Welcome to the Oakhill Dental Associates Website!</h3>
             

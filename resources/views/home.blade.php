@@ -7,7 +7,7 @@
             <img class="logo" src="{{ asset('images/oakhilllogo.png') }}" alt="Oakhill Dental Logo">
         </div>
         <div class="header-img preload">
-            <img src="{{ asset('images/pexels-photo.jpg') }}" />
+            <img src="{{ asset('images/dr-zick-w-kids.jpg') }}" />
         </div>
         <div class="info">
             <p>Your questions are welcome!<br> 

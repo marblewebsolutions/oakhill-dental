@@ -6,8 +6,10 @@
             position: relative;
             
             img {
-                padding: 8% 5% 0 0;
+                @include box-shadow();
+                margin: 8% 5% 0 0;
                 position: relative;
+                width: 95%;
             }
             
             .img-bg {
