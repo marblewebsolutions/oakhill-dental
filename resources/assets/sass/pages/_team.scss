@@ -1,4 +1,46 @@
 .team {
+    .block-team {
+        .arrow-left {
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent; 
+            border-right: 10px solid $primary; 
+            cursor: pointer;
+            height: 0; 
+            width: 0; 
+        }
+        
+        .arrow-right {
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid $primary;
+            cursor: pointer;
+            height: 0; 
+            width: 0; 
+            
+        }
+        
+        .slide-controls {
+            bottom: 1em;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            user-select: none;
+            width: 100%;
+            
+            > * {
+                display: inline-block;
+                user-select: none;
+                vertical-align: middle;
+            }
+            
+            .slide-instruction {
+                font-style: italic;
+                margin: 0 1em;
+                max-width: 225px;
+            }
+        }
+    }
+        
     .team-member {
         background: $primary;
         border-radius: 24px;
@@ -36,6 +78,58 @@
         
         .role {
             font-style: italic;
+        }
+    }
+    
+    @media screen and (max-width: $med) {
+        .block-team {
+            height: calc(100vh - 6em);
+            overflow: hidden;
+            
+            .block-content {
+                height: 100%;
+                padding: 0;
+                width: 100%;
+            }
+        }
+        
+        .team-member {
+            background: $white;
+            border-radius: 0;
+            @include box-shadow(none);
+            left: 120vw;
+            margin-top: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            
+            .bio {
+                margin-top: 1em;
+            }
+            
+            .description,
+            .profile {
+                display: block;
+                margin: auto;
+            }
+            
+            .description {
+                padding: 0;
+                width: 90%;
+                
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+            
+            .name,
+            .role {
+                font-size: 1.5rem;
+            }
+            
+            .profile {
+                width: 20em;
+            }
         }
     }
 }

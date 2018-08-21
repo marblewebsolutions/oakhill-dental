@@ -2,22 +2,16 @@ a {
   color: $text;
   text-decoration: none;
   @include transition();
-  
-  &:hover {
-    color: $text-gold;
-  }
 }
 
 .underline-link {
   border-bottom: 2px solid transparent;
   color: $text;
-  padding-bottom: 3px;
   @include transition();
   
   &:hover,
   &.active {
     border-color: $text-gold;
-    color: $text-gold;
   }
 }
 

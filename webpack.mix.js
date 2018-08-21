@@ -20,5 +20,12 @@ mix.js(['resources/assets/js/app.js',
     .js([
         'resources/assets/js/app.js',
         'resources/assets/js/nav.js',
+        'resources/assets/js/team.js'], 'public/js/team.js')
+    .js([
+        'resources/assets/js/app.js',
+        'resources/assets/js/nav.js',
         'resources/assets/js/testimonials.js'], 'public/js/testimonials.js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+   .sass('resources/assets/sass/app.scss', 'public/css')
+   .options({
+      processCssUrls: false
+   });

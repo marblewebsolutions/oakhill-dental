@@ -11,9 +11,10 @@
         </div>
         <div class="info">
             <p>Your questions are welcome!<br> 
-            Give us a call at <span class="bold">@include('partials.links.phone')</span><br>
-            Or stop by our office:<br>
-            <span class="bold">@include('partials.links.address')</span></p>
+            Give us a call at <span class="bold">@include('partials.links.phone', ['classes' => ['underline-link']])</span><br>
+            or send us an email at <span class="bold">@include('partials.links.email', ['classes' => ['underline-link']])</span><br><br>
+            Stop by our office:<br>
+            <span class="bold">@include('partials.links.address', ['classes' => ['underline-link']])</span></p>
         </div>
     </div>
 @stop
