@@ -42,10 +42,11 @@ var Home = function() {
         function navStickToTop() {
             if ($window.outerWidth() > 768) {
                 var navOffsetTop = $nav.offset().top;
+                console.log($window.scrollTop(), navOffsetTop);
+                
+                $nav.addClass('relative');
             
-                if ($window.scrollTop() < navOffsetTop) {
-                    $nav.addClass('relative');
-                } else {
+                if ($window.scrollTop() > navOffsetTop) {
                     $nav.removeClass('relative');
                 }
                     
@@ -56,8 +57,6 @@ var Home = function() {
                         $nav.removeClass('relative');
                     }
                 });
-            } else {
-                $nav.removeClass('relative');
             }
         }
         
@@ -65,6 +64,7 @@ var Home = function() {
         
         // Offsets may change on resizing window
         $(window).resize(function() {
+            
             navStickToTop();
         });
     }
@@ -84,7 +84,6 @@ var Home = function() {
         $window.scroll(function() {
             var scrollTop = $(window).scrollTop();
             var bgPosPer =  (((scrollTop) / (windowHeight - topHeaderHeight - navHeight)) * range + startPos) + "%";
-            console.log(bgPosPer);
             $bgImg.css('background-position', "0 " + bgPosPer);
         })
     }

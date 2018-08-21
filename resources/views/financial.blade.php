@@ -50,7 +50,7 @@
         </div>
     </div>
     
-    @include('partials.call-banner')
+    @include('partials.call-banner', ['text' => 'Our team is here if you have any questions'])
     
     <div class="block spacer">
         <div class="block-content"></div>

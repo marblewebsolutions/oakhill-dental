@@ -19,12 +19,6 @@
             </div>
         </div>
     </div>
-    
-    @include('partials.call-banner')
-    
-    <div class="block spacer">
-        <div class="block-content"></div>
-    </div>
 @stop
 
 

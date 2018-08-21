@@ -3,8 +3,12 @@
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 1em;
+  
+  .footer-item {
+    text-align: center;
+  }
   
   @media screen and (max-width: $med) {
     align-items: flex-start;

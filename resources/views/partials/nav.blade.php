@@ -31,7 +31,7 @@
         </div>
         
         <div class="center">
-            <img src="{{ asset('images/oakhilllogo.png') }}" alt="Oakhill Dental">
+            <img src="{{ asset('images/ODA_logo.png') }}" alt="Oakhill Dental">
         </div>
         
         <div class="right">

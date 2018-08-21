@@ -51,14 +51,7 @@ function Navigation() {
         });
     }
     
-    $(document).ready(function() {
-        initializeNavPosition();
-        initializeMobileNav();
-    });
-    
-    $(window).resize(function() {
-        initializeNavPosition();
-    });
+    initializeMobileNav();
 }
 
 Navigation();

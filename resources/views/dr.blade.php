@@ -32,11 +32,5 @@
             <p class="mb-sm">His family includes wife Jan and two children Danielle ( 1993) and Taylor (1995). Outside of dentistry Dr. Zick enjoys water and snow sports, golf, biking, boating, fishing, pickleball, platform tennis and spending time with friends and family. In short his passion is to solve simple to very complex dental problems that work with his patient goals and needs.</p>
         </div>
     </div>
-    
-    @include('partials.call-banner')
-    
-    <div class="block spacer">
-        <div class="block-content"></div>
-    </div>
 @stop
 

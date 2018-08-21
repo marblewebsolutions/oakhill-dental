@@ -4,7 +4,7 @@
 @section('header')
     <div class="header">
         <div class="header-top fixed-top">
-            <img class="logo" src="{{ asset('images/oakhilllogo.png') }}" alt="Oakhill Dental Logo">
+            <img class="logo" src="{{ asset('images/ODA_logo.png') }}" alt="Oakhill Dental Logo">
         </div>
         <div class="header-img preload">
             <img src="{{ asset('images/dr-zick-w-kids.jpg') }}" />

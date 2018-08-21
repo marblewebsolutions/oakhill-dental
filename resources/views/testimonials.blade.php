@@ -15,12 +15,6 @@
             <button class="btn more">See More Testimonials</button>
         </div>
     </div>
-    
-    @include('partials.call-banner')
-    
-    <div class="block spacer">
-        <div class="block-content"></div>
-    </div>
 @stop
 
 
