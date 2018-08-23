@@ -45,12 +45,13 @@
     position: relative;
     
     .header-img {
+      background-color: $primary;
       background-image: url('../images/dr-zick-w-kids.jpg');
       background-position: 0 10%;
       background-repeat: no-repeat;
       background-size: 100% auto;
-      height: calc(100vh - (#{$nav-height} * 2));
-      margin-top: $nav-height;
+      height: calc(100vh - #{$nav-height} - 8em);
+      margin-top: 8em;
       opacity: 1;
       transition: 2s opacity ease;
       
@@ -71,7 +72,7 @@
       box-shadow: 0 0 20px 3px rgba(0,0,0,.5);
       color: $white;
       display: flex;
-      height: $nav-height;
+      height: 8em;
       justify-content: space-evenly;
       position: absolute;
       text-align: center;
@@ -92,7 +93,7 @@
     .info {
       background: $primary;
       border-radius: 24px;
-      max-width: 20em;
+      max-width: 21em;
       right: 10%;
       padding: 1.5em;
       position: absolute;

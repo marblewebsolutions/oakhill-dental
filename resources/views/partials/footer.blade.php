@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer-item">
-        <h3>Come Visit Us!</h3>
-        <p><b>Hours:</b> Mon - Fri 8am - 5pm</p>
+        <h3>Visit Us</h3>
+        <p><b>Hours:</b> Mon - Fri: 8am - 5pm</p>
         <p><b>Location:</b> @include('partials.links.address', ['classes' => ['underline-link']])</p>
     </div>
     

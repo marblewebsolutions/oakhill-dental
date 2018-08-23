@@ -10,6 +10,7 @@ $primary: $green;
 $primary-trans: transparentize($primary, .2);
 $secondary: $dark-gray;
 $secondary-trans: transparentize($secondary, .2);
+$secondary-light: transparentize($secondary, .8);
 $accent: $gold;
 
 $text: $dark-gray;

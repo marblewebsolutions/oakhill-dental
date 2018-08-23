@@ -11,11 +11,16 @@
   }
   
   @media screen and (max-width: $med) {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     
     > *:not(:last-child) {
       margin-bottom: 2rem;
+    }
+    
+    .footer-item:not(:last-child) {
+      border-bottom: 2px solid $secondary-light;
+      padding-bottom: 2em;
     }
   }
 }
