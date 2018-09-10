@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- SEO
-    <meta name="description" content="Enter Description Here">
-    <meta name="keywords" content="Construction, East, Lansing, Corbett">
-    -->
+    
+    <!-- SEO -->
+    <meta name="description" content="Family Dentistry in Lansing, Mi., Dentist Dr. Daniel Zick DDS, Dentistry, Oakhill Dental Associates on Lake Lansing Rd., Lansing.">
+    <meta name="keywords" content="Oakhill, Dental, Dentist, Lansing, Zick">
 
     <!-- site css -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
