@@ -34,6 +34,7 @@
         
         .block-content {
             padding: 0;
+            max-width: 80em;
         }
         
         .tile {
@@ -41,13 +42,19 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 22em;
+            height: 25em;
             opacity: 1;
-            padding: 1em;
             position: relative;
+            
+            ul {
+                font-size: 1.3em;
+                list-style: initial;
+                margin-left: 20px;
+            }
             
             .cover {
                 background: $dark-gray-trans;
+                display: flex;
                 height: 100%;
                 left: 0;
                 opacity: 0;
@@ -56,12 +63,60 @@
                 @include transition();
                 width: 100%;
                 
-                .cover-text {
-                    color: $primary;
-                    line-height: 1.2;
-                    margin: 2em auto auto;
-                    text-align: center;
-                    width: 90%;
+                .cover-button {
+                    border-color: $primary;
+                    cursor: pointer;
+                    margin: auto;
+                    z-index: 1;
+                    
+                    &:hover {
+                        background-color: $primary;
+                    }
+                }
+            }
+            
+            .more-info {
+                background: $white;
+                border: 8px solid $secondary;
+                @include box-shadow();
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                overflow: auto;
+                padding: 1em;
+                pointer-events: none;
+                position: absolute;
+                top: 0;
+                @include transition();
+                width: 100%;
+                z-index: 2;
+                
+                p {
+                    font-size: 2em;
+                }
+                
+                .close {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 48px;
+                    padding: 0 1.5rem;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+                
+                .more-info-text {
+                    padding-right: 50px;
+                }
+                
+                &.active {
+                    opacity: 1;
+                    pointer-events: auto;
                 }
             }
             
@@ -100,40 +155,41 @@
                 }
             }
             
-            /*&:hover {
+            &:hover {
                 .cover {
                     opacity: 1;
                 }
-            }*/
+            }
         }
         
         .tile-1 {
-            background-image: url('/images/services/dentaltoolsStock.jpg');
-        }
-        
-        .tile-2 {
-            background-image: url('/images/services/smileStock.jpg');
-        }
-        
-        .tile-3 {
-            background-image: url('/images/services/sleepingStock.jpg');
-        }
-        
-        .tile-4 {
             background-image: url('/images/services/smile2Stock.jpg');
         }
         
+        .tile-2 {
+            background-image: url('/images/services/jawpain.png');
+        }
+        
+        .tile-3 {
+            background-image: url('/images/services/denture.jpg');
+        }
+        
+        .tile-4 {
+            background-image: url('/images/services/rootcanal.png');
+        }
+        
         .tile-5 {
-            background-image: url('/images/services/crownStock.jpg');
+            background-image: url('/images/services/crown.png');
         }
         
         .tile-6 {
-            background-image: url('/images/services/venneer2Stock.jpg');
+            background-image: url('/images/services/smileStock.jpg');
         }
         
         .tiles {
             display: grid;
             grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+            position: relative;
         }
     }
     
@@ -184,12 +240,6 @@
         
         .block-services {
             .tile {
-                .cover {
-                    .cover-text {
-                        font-size: 1.3em;
-                    }
-                }
-                
                 .tile-title {
                     padding: 0 .5em;
                 }

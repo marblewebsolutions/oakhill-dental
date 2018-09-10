@@ -17,5 +17,5 @@
 
 
 @section('js')
-    <script src="{{ url('/js/home.js') }}"></script>
+    <script src="{{ url('/js/services.js') }}"></script>
 @stop

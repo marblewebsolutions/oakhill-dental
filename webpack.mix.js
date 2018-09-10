@@ -20,6 +20,10 @@ mix.js(['resources/assets/js/app.js',
     .js([
         'resources/assets/js/app.js',
         'resources/assets/js/nav.js',
+        'resources/assets/js/services.js'], 'public/js/services.js')
+    .js([
+        'resources/assets/js/app.js',
+        'resources/assets/js/nav.js',
         'resources/assets/js/team.js'], 'public/js/team.js')
     .js([
         'resources/assets/js/app.js',

@@ -77,8 +77,8 @@ var Home = function() {
         var navHeight = $('.nav').height();
         
         // Background position constants
-        var startPos = 10; // 10% down to start
-        var range = 50; // Can move up to 50% down
+        var startPos = 73; // 50% down to start
+        var range = -115; // Can move up to 150% down
         
         
         $window.scroll(function() {

@@ -46,10 +46,10 @@
     
     .header-img {
       background-color: $primary;
-      background-image: url('../images/dr-zick-w-kids.jpg');
-      background-position: 0 10%;
+      background-image: url('../images/zick-header.JPG');
+      background-position: 0 73%;
       background-repeat: no-repeat;
-      background-size: 100% auto;
+      background-size: cover;
       height: calc(100vh - #{$nav-height} - 8em);
       margin-top: 8em;
       opacity: 1;
@@ -93,12 +93,14 @@
     .info {
       background: $primary;
       border-radius: 24px;
+      @include box-shadow();
       max-width: 21em;
-      right: 10%;
+      right: 7%;
       padding: 1.5em;
       position: absolute;
       text-align: center;
       top: 10%;
+      transition: .3s right ease;
     }
   }
   
@@ -139,6 +141,14 @@
         left: 0;
         top: 0;
         width: 60%;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .header {
+      .info {
+        right: 50%;
       }
     }
   }

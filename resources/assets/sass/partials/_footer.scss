@@ -1,13 +1,40 @@
 .footer {
   background: $primary;
-  align-items: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
   padding: 1em;
+  
+  .footer-items {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
   
   .footer-item {
     text-align: center;
+  }
+  
+  .mws-credit {
+    margin-top: 30px;
+    text-align: right;
+    
+    a {
+      font-size: 14px;
+    }
+    
+    .blue,
+    .orange {
+      @include transition();
+    }
+    
+    &:hover {
+      .blue {
+        color: #96e6ff;
+      }
+      
+      .orange {
+        color: #ffd298;
+      }
+    }
   }
   
   @media screen and (max-width: $med) {
