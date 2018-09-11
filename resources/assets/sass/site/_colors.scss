@@ -8,6 +8,7 @@ $white: #fff;
 
 $primary: $green;
 $primary-trans: transparentize($primary, .2);
+$primary-dark: darken($primary, .1);
 $secondary: $dark-gray;
 $secondary-trans: transparentize($secondary, .2);
 $secondary-light: transparentize($secondary, .8);
@@ -15,3 +16,4 @@ $accent: $gold;
 
 $text: $dark-gray;
 $text-gold: $gold;
+$text-primary: $primary-dark;

@@ -20,7 +20,7 @@
         }
         
         .slide-controls {
-            bottom: 1em;
+            top: 1em;
             left: 0;
             position: absolute;
             text-align: center;
@@ -83,7 +83,7 @@
     
     @media screen and (max-width: $med) {
         .block-team {
-            height: calc(100vh - 6em);
+            height: calc(200vh - 6em);
             overflow: hidden;
             
             .block-content {
@@ -98,7 +98,7 @@
             border-radius: 0;
             @include box-shadow(none);
             left: 120vw;
-            margin-top: 0;
+            margin-top: 4em;
             position: absolute;
             top: 0;
             width: 100%;

@@ -1,13 +1,29 @@
 .financial {
     .block-financial {
-        h2,
-        p {
+        h2 {
             margin: 1.5rem 0 0;
+        }
+        
+        p {
+            margin: 1rem 0 0;
         }
         
         .subtitle {
             font-size: 1.3rem;
             text-align: center;
+        }
+    }
+    
+    @media screen and (max-width: $med) {
+        .block-financial {
+            h2 {
+                margin: 2.5em 0 0;
+            }
+            
+            .subtitle {
+                font-size: 1.7rem;
+                text-align: center;
+            }
         }
     }
 }

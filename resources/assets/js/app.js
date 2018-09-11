@@ -10,6 +10,9 @@
 window.$ = window.jQuery = require('jquery');
 $window = $(window);
 
+// Hover on mobile
+$('body').bind('touchstart', function() {});
+
 function preloadImages() {
     var preloaded = function($img) {
         $($img).removeClass('preload');
@@ -29,5 +32,7 @@ function preloadImages() {
 }
 
 preloadImages();
+
+
 
 

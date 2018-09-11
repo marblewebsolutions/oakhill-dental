@@ -21,9 +21,11 @@ function Services() {
             
             // More Info Active
             $moreButton.click(function() {
+                $('body').addClass('no-scroll');
+                
                 $moreInfo.addClass('active');
                 
-                if (isMobile) {
+                /*if (isMobile) {
                     $moreInfo.css('position', 'fixed');
                     $moreInfo.css('height', '90vh');
                     $moreInfo.css('width', '90vw');
@@ -45,12 +47,14 @@ function Services() {
                     }
                     $moreInfo.css('margin', '');
                     $moreInfo.css('z-index', '');
-                }
+                }*/
                 
             });
             
             // More Info Inactive
             $close.click(function() {
+                $('body').removeClass('no-scroll');
+                
                 $moreInfo.css('height', '');
                 $moreInfo.css('width', '');
                 $moreInfo.css('left', '');

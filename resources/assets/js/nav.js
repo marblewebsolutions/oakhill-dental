@@ -4,22 +4,6 @@
 function Navigation() {
     var $nav = $('nav');
     
-    function initializeNavPosition() {
-        if ($('.view').hasClass('home')) {
-            return;
-        }
-        
-        var navTop = $nav.offset().top;
-        
-        $(window).on('scroll', function() {
-            if ($window.scrollTop() >= navTop) {
-                $nav.addClass('fixed-top');
-            } else {
-                $nav.removeClass('fixed-top');
-            }
-        });
-    }
-    
     function initializeMobileNav() {
         var $mobileToggle = $nav.find('.mobile-nav-toggle');
         var $mobileNav = $('.nav-mobile');
@@ -45,7 +29,7 @@ function Navigation() {
         });
         
         $window.resize(function() {
-            if ($window.outerWidth() > 768 && $mobileToggle.hasClass('active')) {
+            if ($window.outerWidth() > 800 && $mobileToggle.hasClass('active')) {
                 closeMobileNav();
             }
         });

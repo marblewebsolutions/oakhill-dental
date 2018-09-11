@@ -67,6 +67,9 @@
 
   .nav-link {
     display: inline-block;
+    margin: 0 2em;
+    @include transition();
+    vertical-align: center;
 
     &.active {
       a {
@@ -76,10 +79,7 @@
   }
 
   .nav-links {
-    align-items: center;
-    display: flex;
-    height: inherit;
-    justify-content: space-evenly;
+    line-height: 6em;
     margin: auto;
     max-width: 83em;
   }
@@ -88,7 +88,13 @@
     margin-top: $nav-height;
   }
   
-  @media screen and (max-width: $med) {
+  @media screen and (max-width: 1000px) {
+    .nav-link {
+      margin: 0 1em;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
     .mobile-content {
       display: flex;
     }

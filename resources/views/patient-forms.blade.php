@@ -6,9 +6,9 @@
         <div class="block-content">
             <h1 class="title text-center mb-med">A Lifetime of Beautiful, <br class="show-on-mobile"> Healthy Smiles</h1>
 
-            <h2 class="mt-med">OAKHILL DENTAL PATIENT FORMS & INFORMATION</h2>
+            <h2>OAKHILL DENTAL PATIENT FORMS & INFORMATION</h2>
             
-            <p class="description mt-med mx-auto">For your convenience, Oakhill Dental now offers Dentrix automated 
+            <p class="description mt-sm mx-auto">For your convenience, Oakhill Dental now offers Dentrix automated 
             online patient forms & information. Click on a link below to get started.</p>
             
             <div class="form-buttons mt-med">

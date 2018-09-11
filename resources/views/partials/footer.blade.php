@@ -14,6 +14,6 @@
     </div>
     
     <div class="mws-credit">
-        <p><a href="https://marblewebsolutions.com" target="_blank">Designed by <span class="blue">Marble</span> <span class="orange">Web Solutions</span> <span class="blue">LLC</span></a></p>
+        <p><a href="https://marblewebsolutions.com" target="_blank">Designed by<br> <span class="blue">Marble</span> <span class="orange">Web Solutions</span> <span class="blue">LLC</span></a></p>
     </div>
 </footer>

@@ -91,7 +91,7 @@
     }
     
     .info {
-      background: $primary;
+      background: $white;
       border-radius: 24px;
       @include box-shadow();
       max-width: 21em;
@@ -101,6 +101,10 @@
       text-align: center;
       top: 10%;
       transition: .3s right ease;
+      
+      a {
+        color: $accent;
+      }
     }
   }
   
