@@ -39,6 +39,7 @@ function Team() {
         $(window).resize(function() {
             windowWidth = $('.block-team').width();
             positionSlides(false);
+            setBlockHeight();
         });
         
         function positionSlides(animate = true) {
@@ -78,19 +79,11 @@ function Team() {
                 }
             });
             
-            if ($(window).outerWidth < 768) {
+            if ($(window).outerWidth() < 768) {
                 $teamBlock.css('height', maxHeight + extraMargin);
             } else {
                 $teamBlock.css('height', '');
             }
-            
-            $(window).resize(function() {
-                if ($(window).outerWidth < 768) {
-                    $teamBlock.css('height', maxHeight + extraMargin);
-                } else {
-                    $teamBlock.css('height', '');
-                }
-            });
         }
     }
     
