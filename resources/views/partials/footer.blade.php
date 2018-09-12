@@ -1,15 +1,19 @@
 <footer class="footer">
     <div class="footer-items">
         <div class="footer-item">
-            <h3>Visit Us</h3>
-            <p><b>Hours:</b> Mon - Fri: 8am - 5pm</p>
-            <p><b>Location:</b> @include('partials.links.address', ['classes' => ['underline-link']])</p>
+            <h3>Hours:</h3>
+            <p>Mon: 10am - 5pm</p>
+            <p>Tues - Friday: 8am - 5pm</p>
+            
+            <h3 class="mt-xs">Location:</h3>
+            <p>@include('partials.links.address', ['classes' => ['underline-link']])</p>
         </div>
         
+        <div class="divider show-on-mobile mx-auto"></div>
+        
         <div class="footer-item">
-            <h3>Contact Us</h3>
-            <p>@include('partials.links.email', ['classes' => ['underline-link']])</p>
-            <p>@include('partials.links.phone', ['classes' => ['underline-link']])</p>
+            <p><i class="material-icons">email</i> @include('partials.links.email', ['classes' => ['underline-link']])</p>
+            <p><i class="material-icons">phone</i> @include('partials.links.phone', ['classes' => ['underline-link']])</p>
         </div>
     </div>
     
