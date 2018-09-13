@@ -3,7 +3,10 @@
         <div class="footer-item">
             <h3>Hours:</h3>
             <p>Mon: 10am - 5pm</p>
-            <p>Tues - Friday: 8am - 5pm</p>
+            <p>Tues: 8am - 4pm</p>
+            <p>Weds: 8am - 3pm</p>
+            <p>Thurs: 8am - 3pm</p>
+            <p>Fri (Admin Hours): 9am - 2pm</p>
             
             <h3 class="mt-xs">Location:</h3>
             <p>@include('partials.links.address', ['classes' => ['underline-link']])</p>
