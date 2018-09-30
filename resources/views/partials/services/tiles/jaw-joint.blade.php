@@ -1,6 +1,6 @@
 @extends('partials.services.tiles.tile', 
     ['num' => '2', 
-    'service_name' => 'JAW JOINT EVALUTATION & TREATMENT',
+    'service_name' => 'Jaw Joint Evaluation & Treatment',
     'service_info_text' => 'Temporomandibular joint (TMJ) or jaw joint is where 
     the jawbone connects to the skull at the side of the head. The free movement 
     in the joint is sometimes affected, making it difficult or unable to open and 

@@ -2,7 +2,7 @@
   border: .75em solid $color;
 }
 
-@mixin box-shadow($shadow: 2px 2px 15px $dark-gray-trans) {
+@mixin box-shadow($shadow: 4px 4px 13px 3px rgba(0, 0, 0, .4)) {
   box-shadow: $shadow;
 }
 

@@ -30,11 +30,9 @@
     }
     
     .block-services {
-        background: $primary;
-        
         .block-content {
             padding: 0;
-            max-width: 80em;
+            max-width: 90em;
         }
         
         .tile {
@@ -42,9 +40,13 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            @include box-shadow();
+            cursor: pointer;
             height: 25em;
+            margin: 1.5rem;
             opacity: 1;
             position: relative;
+            width: 25em;
             
             ul {
                 font-size: 1.3em;
@@ -75,17 +77,23 @@
                 }
             }
             
+            .invisalign-logo {
+                width: 83%;
+            }
+            
             .more-info {
                 background: $white;
                 border: 8px solid $secondary;
                 bottom: 0;
                 @include box-shadow();
+                cursor: auto;
                 height: 40vh;
                 left: 0;
                 margin: auto;
+                max-width: 40vw;
                 opacity: 0;
-                overflow-y: auto;
-                padding: 1em;
+                overflow: hidden;
+                padding: 2em;
                 pointer-events: none;
                 position: fixed;
                 right: 0;
@@ -94,8 +102,14 @@
                 width: 40vw;
                 z-index: $modal-z;
                 
+                .underline-link {
+                    color: $accent;
+                    cursor: pointer;
+                }
+                
+                a, 
                 p {
-                    font-size: 2em;
+                    font-size: 2rem;
                 }
                 
                 .close {
@@ -114,12 +128,22 @@
                 }
                 
                 .more-info-text {
-                    margin-right: 50px;
+                    height: 85%;
+                    overflow-y: auto;
+                }
+                
+                .more-info-title {
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: 2.5rem;
+                    margin-right: 65px;
+                    text-transform: capitalize;
+                    width: calc(100% - 65px);
                 }
                 
                 &.active {
                     bottom: 0;
-                    height: 90vh;
+                    height: 75vh;
                     left: 0;
                     margin: auto;
                     opacity: 1;
@@ -127,6 +151,7 @@
                     position: fixed;
                     right: 0;
                     top: 0;
+                    max-width: 60em;
                     width: 90vw;
                     z-index: $modal-z;
                 }
@@ -142,6 +167,7 @@
                 padding: 0 1em;
                 position: absolute;
                 right: 1em;
+                text-transform: uppercase;
                 
                 h3 {
                     margin: auto;
@@ -161,6 +187,10 @@
                 width: 100%;
             }
             
+            &.no-cover {
+                cursor: auto;
+            }
+            
             &.preload {
                 &::after {
                     opacity: 1;
@@ -174,33 +204,71 @@
             }
         }
         
+        /* Extraction */
         .tile-1 {
             background-image: url('/images/services/smile2Stock.jpg');
         }
         
+        /* Jaw Pain */
         .tile-2 {
             background-image: url('/images/services/jawpain.jpg');
         }
         
+        /* Dentures */
         .tile-3 {
             background-image: url('/images/services/denture.jpg');
         }
         
+        /* Root Canal */
         .tile-4 {
             background-image: url('/images/services/rootcanal.png');
         }
         
+        /* Crowns */
         .tile-5 {
             background-image: url('/images/services/crown.png');
         }
         
+        /* Sleep Aid */
         .tile-6 {
-            background-image: url('/images/services/smileStock.jpg');
+            background-image: url('/images/services/prince-akachi-731123-unsplash.jpg');
+        }
+        
+        /* Whitening */
+        .tile-7 {
+            background-image: url('/images/services/dani-vivanco-557423-unsplash.jpg');
+        }
+        
+        /* Porcelain Veneers */
+        .tile-8 {
+            background-image: url('/images/services/serrah-galos-598535-unsplash.jpg');
+        }
+        
+        /* Multi-Tooth Bonding */
+        .tile-9 {
+            background-image: url('/images/services/adorable-beautiful-black-and-white-325687.jpg');
+        }
+        
+        /* Invisalign */
+        .tile-10 {
+            background-image: url('/images/services/invisalign-88.jpg');
+        }
+        
+        /* Inlays and Onlays */
+        .tile-11 {
+            background-image: url('/images/services/umanoide-617690-unsplash.jpg');
+        }
+        
+        /* Regular Cleaning */
+        .tile-12 {
+            background-image: url('/images/services/jon-tyson-265734-unsplash.jpg');
         }
         
         .tiles {
-            display: grid;
-            grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
             position: relative;
         }
     }

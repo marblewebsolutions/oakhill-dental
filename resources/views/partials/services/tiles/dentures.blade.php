@@ -1,6 +1,6 @@
 @extends('partials.services.tiles.tile', 
     ['num' => '3', 
-    'service_name' => 'DENTURE, PARTIAL DENTURES & ALL ON 4',
+    'service_name' => 'Dentures',
     'service_info_text' => 'Dentures are removable appliances that can replace 
     missing teeth and help restore your smile. If you’ve lost all or some of your 
     natural teeth, whether from gum disease, tooth decay or injury, replacing 
