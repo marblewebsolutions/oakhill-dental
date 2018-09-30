@@ -1,5 +1,5 @@
 <div class="block-content">
-    <div class="split-2 text-center">
+    <div class="split-2 text-center header-text">
         <div class="text-cont">
             <p class="mb-med">Oakhill Dental Associates provides a wide range of dental 
             services. Our practice incorporates <b>Preventative</b> care and 
