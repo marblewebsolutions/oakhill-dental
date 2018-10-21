@@ -3,7 +3,7 @@
         <a href="{{ url('sleep-center') }}" class="cover-button btn">Find Out More</a>
     </div>
     
-    <div class="tile-title"><h3>Sleep Aid</h3></div>
+    <div class="tile-title"><h3>Sleep Apnea</h3></div>
     
     <div class="open-cover"></div>
 </div>
