@@ -36,7 +36,8 @@
   .border-left {
     border-left: 4px solid $primary;
     border-radius: 2px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 0 0 2rem;
     width: 90%;
   }

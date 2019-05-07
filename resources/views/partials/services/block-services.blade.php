@@ -19,5 +19,7 @@
         @include('partials.services.tiles.sleep-aid')
         @include('partials.services.tiles.jaw-joint')
         @include('partials.services.tiles.root-canal')
+        
+        @include('partials.services.tiles.digital-scanning')
     </div>
 </div>

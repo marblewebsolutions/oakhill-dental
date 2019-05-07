@@ -44,7 +44,6 @@
             cursor: pointer;
             height: 25em;
             margin: 1.5rem;
-            opacity: 1;
             position: relative;
             width: 25em;
             
@@ -82,24 +81,19 @@
             }
             
             .more-info {
-                background: $white;
-                border: 8px solid $secondary;
+                background: rgba(30, 30, 30, .8);
                 bottom: 0;
-                @include box-shadow();
                 cursor: auto;
-                height: 40vh;
+                display: flex;
+                height: 100vh;
                 left: 0;
-                margin: auto;
-                max-width: 40vw;
                 opacity: 0;
                 overflow: hidden;
-                padding: 2em;
                 pointer-events: none;
                 position: fixed;
                 right: 0;
                 top: 0;
-                @include transition();
-                width: 40vw;
+                width: 100vw;
                 z-index: $modal-z;
                 
                 .underline-link {
@@ -116,15 +110,29 @@
                     background: none;
                     border: none;
                     cursor: pointer;
-                    font-size: 48px;
+                    font-size: 40px;
                     padding: 0 1.5rem;
                     position: absolute;
                     right: 0;
                     top: 0;
+                    @include transition();
                     
                     &:hover {
                         color: $accent;
+                        transform: scale(1.2);
                     }
+                }
+                
+                .more-info-container {
+                    background: $white;
+                    border: 8px solid $secondary;
+                    height: 75vh;
+                    margin: auto;
+                    max-width: 800px;
+                    opacity: 0;
+                    padding: 2em;
+                    transform: scale(.4);
+                    width: 90vw;
                 }
                 
                 .more-info-text {
@@ -141,19 +149,22 @@
                     width: calc(100% - 65px);
                 }
                 
+                &.transition {
+                    transition: .3s opacity ease;
+                    
+                    .more-info-container {
+                        transition: .3s opacity ease, .3s transform ease;
+                    }
+                }
+                
                 &.active {
-                    bottom: 0;
-                    height: 75vh;
-                    left: 0;
-                    margin: auto;
                     opacity: 1;
                     pointer-events: auto;
-                    position: fixed;
-                    right: 0;
-                    top: 0;
-                    max-width: 60em;
-                    width: 90vw;
-                    z-index: $modal-z;
+                    
+                    .more-info-container {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
                 }
             }
             
@@ -264,6 +275,11 @@
             background-image: url('/images/services/jon-tyson-265734-unsplash.jpg');
         }
         
+        /* Digital Scanning */
+        .tile-13 {
+            background-image: url('/images/services/digital-scanning.png');
+        }
+        
         .tiles {
             align-items: center;
             display: flex;
@@ -338,6 +354,12 @@
                 &:hover {
                     box-shadow: none;
                 }
+            }
+            
+            .text-cont {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }

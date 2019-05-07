@@ -9,6 +9,8 @@ function Services() {
             var $moreInfo = $tile.find('.more-info');
             var $close = $tile.find('.close');
             
+            $moreInfo.addClass('transition');
+            
             $tile.click(function(e) {
                 if ($tile.hasClass('no-cover')) {
                     return;

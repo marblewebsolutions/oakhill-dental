@@ -1,8 +1,10 @@
 <div class="tile preload tile-{{$num}}">
     <div class="more-info">
-        <h2 class="more-info-title">{{$service_name}}</h2>
-        <p class="more-info-text">{!!$service_info_text!!}</p>
-        <a class="close">&times;</a>
+        <div class="more-info-container">
+            <h2 class="more-info-title">{{$service_name}}</h2>
+            <p class="more-info-text">{!!$service_info_text!!}</p>
+            <a class="close">&times;</a>
+        </div>
     </div>
     
     <div class="cover">

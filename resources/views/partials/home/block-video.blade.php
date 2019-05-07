@@ -5,7 +5,7 @@
         area.</h3>
     </div>
     
-    <div class="show-on-mobile mb-med">
+    <div class="show-on-mobile mb-lg">
         <div class="box">
             <h3>For over 25 years Dr. Daniel Zick and his team have been 
             delivering exceptional dental care to the Greater Lansing Michigan 

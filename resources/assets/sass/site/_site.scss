@@ -47,15 +47,30 @@
   border: 3px solid $secondary-trans;
   color: $text;
   cursor: pointer;
+  display: inline-block;
   font-size: 1.6rem;
   padding: .2em 1em;
+  text-align: center;
   @include transition();
 
   &:hover,
   &.active {
     background: $accent;
-    box-shadow: none;
-    color: $text;
+  }
+  
+  &.full-width {
+    width: 100%;
+  }
+  
+  &.primary {
+    background: $primary;
+    @include box-shadow();
+    
+    &:hover,
+    &.active {
+      background: $accent;
+      box-shadow: none;
+    }
   }
 }
 
@@ -108,12 +123,12 @@
 
 .split-2 {
   display: inline-block;
-  padding: 0 1em 0 0;
+  padding: 0 2em 0 0;
   vertical-align: middle;
   width: 50%;
   
   & + .split-2 {
-    padding: 0 0 0 1em;
+    padding: 0 0 0 2em;
   }
 }
 
@@ -136,7 +151,7 @@
   
   .block {
     .block-content {
-      padding: 2em 0;
+      padding: 3em 0;
     }
     
     &.spacer {
@@ -160,11 +175,11 @@
   
   .split-2 {
     display: block;
-    padding: 0 0 1em;
+    padding: 0 0 2em;
     width: 100%;
     
     & + .split-2 {
-      padding: 1em 0 0;
+      padding: 2em 0 0;
     }
   }
 }
