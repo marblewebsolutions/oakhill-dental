@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'PageController@index');
+Route::get('index.html', function () {
+    return redirect('/');
+});
 Route::get('dr', 'PageController@dr');
 Route::get('the-team', 'PageController@team');
 Route::get('services', 'PageController@services');
