@@ -62,6 +62,26 @@ ul {
   list-style: none;
 }
 
+.invisalign-blue {
+  color: $invisalign-blue;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.large-text {
+  font-size: 24px;
+}
+
+.larger-text {
+  font-size: 36px;
+}
+
+.sub {
+  vertical-align: sub;
+}
+
 .subtitle {
   font-size: 1.3rem;
   font-weight: bold;
@@ -70,6 +90,10 @@ ul {
 .title {
   font-family: 'Tangerine', 'Courgette', cursive;
   font-size: 5em;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: $med) {

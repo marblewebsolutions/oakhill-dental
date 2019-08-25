@@ -42,7 +42,6 @@ var Home = function() {
         function navStickToTop() {
             if ($window.outerWidth() > 768) {
                 var navOffsetTop = $nav.offset().top;
-                console.log($window.scrollTop(), navOffsetTop);
                 
                 $nav.addClass('relative');
             
