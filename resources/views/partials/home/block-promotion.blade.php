@@ -1,7 +1,7 @@
 <div class="block-content">
     <div class="invisalign-border show-on-desktop">
         <div class="split-2">
-            <p class="text-center"><img src="{{ asset('images/services/invisalign-88.jpg') }}" alt="Invisalign User"></p>
+            <p class="text-center"><img src="{{ asset('images/invisalign-user.jpg') }}" alt="Invisalign User"></p>
             <p><span class="large-text invisalign-blue underline sub mr-sm">$500 OFF</span> PLUS Get a <span class="underline">FREE</span> 3D Invisalign Scan!</p>
             <p class="mt-md"><img class="invisalign-img" src="{{ asset('images/Invisalign-Logo-blue.png') }}" alt="Invisalign Logo"></p>
             <ul>
@@ -22,7 +22,7 @@
     </div>
     
     <div class="invisalign-border show-on-mobile">
-        <p class="text-center"><img class="img" src="{{ asset('images/services/invisalign-88.jpg') }}" alt="Invisalign User"></p>
+        <p class="text-center"><img class="img" src="{{ asset('images/invisalign-user.jpg') }}" alt="Invisalign User"></p>
         <p class="text-center"><span class="large-text invisalign-blue underline sub mr-sm">$500 OFF</span> PLUS Get a <span class="underline">FREE</span> 3D Invisalign Scan!</p>
         <p class="mt-md"><img class="invisalign-img" src="{{ asset('images/Invisalign-Logo-blue.png') }}" alt="Invisalign Logo"></p>
         <ul>
