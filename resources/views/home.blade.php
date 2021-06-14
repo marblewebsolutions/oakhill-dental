@@ -21,9 +21,11 @@
 
 
 @section('main')
+    <!--
     <div class="block block-promotion">
         @include('partials.home.block-promotion')
     </div>
+    -->
     
     <div class="block welcome">
         @include('partials.home.block-welcome')
